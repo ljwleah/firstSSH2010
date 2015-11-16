@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- FileName:  province.xml -->
+<root>
+  <code name="北京市" id="110000"></code>
+  <code name="天津市" id="120000"></code>
+  <code name="河北省" id="130000"></code>
+  <code name="山西省" id="140000"></code>
+  <code name="内蒙古" id="150000"></code>
+  <code name="辽宁省" id="210000"></code>
+  <code name="吉林省" id="220000"></code>
+  <code name="黑龙江省" id="230000"></code>
+  <code name="上海市" id="310000"></code>
+  <code name="江苏省" id="320000"></code>
+  <code name="浙江省" id="330000"></code>
+  <code name="安徽省" id="340000"></code>
+  <code name="福建省" id="350000"></code>
+  <code name="江西省" id="360000"></code>
+  <code name="山东省" id="370000"></code>
+  <code name="河南省" id="410000"></code>
+  <code name="湖北省" id="420000"></code>
+  <code name="湖南省" id="430000"></code>
+  <code name="广东省" id="440000"></code>
+  <code name="广西省" id="450000"></code>
+  <code name="海南省" id="460000"></code>
+  <code name="重庆市" id="500000"></code>
+  <code name="四川省" id="510000"></code>
+</root>

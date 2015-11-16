@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+  <session-factory>
+    <property name="hbm2ddl.auto">update</property>
+    <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/hawk</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">123456</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="myeclipse.connection.profile">mysql 5.5.21</property>
+    <property name="hibernate.show_sql">true</property>
+
+		<!-- configuration pool via c3p0-->
+		<property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		<property name="c3p0.min_size">5</property>
+		<property name="c3p0.max_size">300</property>
+		<property name="c3p0.time_out">1800</property><!-- seconds --><!-- default: 0 -->
+		<property name="c3p0.max_statement">50</property><!-- default: 0 -->
+		<property name="c3p0.acquire_increment">5</property><!-- default: 1 -->
+		<property name="c3p0.idle_test_period">10</property><!-- seconds --><!-- default: 0 -->
+		<property name="c3p0.validate">true</property>
+
+        <mapping resource="willow/entity/code/degree.hbm.xml" />
+        <mapping resource="willow/entity/code/department.hbm.xml" />
+        <mapping resource="willow/entity/code/grade.hbm.xml" />
+        <mapping resource="willow/entity/code/major.hbm.xml" />
+        <mapping resource="willow/entity/code/province.hbm.xml" />
+        <mapping resource="willow/entity/code/school.hbm.xml" />
+        <mapping resource="willow/entity/code/schoolclass.hbm.xml" />
+        <mapping resource="willow/entity/code/sex.hbm.xml" />
+
+
+    </session-factory>
+
+</hibernate-configuration>

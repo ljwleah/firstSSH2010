@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- FileName:  department.xml -->
+<root>
+  <code name="计算机与信息技术学院" id="10001"></code>
+  <code name="成教学院" id="20001"></code>
+  <code name="海华学院" id="230001"></code>
+  <code name="华信计算机培训中心" id="A0001"></code>
+</root>

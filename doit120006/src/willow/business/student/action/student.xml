@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<!-- Filename:  student.xml -->
+<struts>
+  <package name="student" namespace="/student" extends="struts-default">
+
+    <action name="register"  class="willow.business.student.action.RegisterAction">
+      <result name="input" type="dispatcher">register.html</result>
+      <result name="success" type="dispatcher">studentlist.html</result>
+    </action>
+
+    <action name="studentlist"  class="willow.business.student.action.StudentListAction">
+      <result name="input" type="dispatcher">studentlist.jsp</result>
+      <result name="success" type="dispatcher">studentlist.jsp</result>
+    </action>
+
+  </package>
+</struts>
+
+

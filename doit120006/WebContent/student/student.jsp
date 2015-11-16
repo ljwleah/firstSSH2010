@@ -1,0 +1,110 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName();
+    basePath = basePath + ":"+request.getServerPort()+path+"/";
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>学生注册</title>
+    <link href="lib/calendar/skins/aqua/theme.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="lib/ajax.js"></script>
+    <script type="text/javascript" src="lib/code.js"></script>
+    <script type="text/javascript" src="lib/calendar/calendar.js"></script>
+    <script type="text/javascript" src="lib/calendar/calendar-setup.js"></script>
+    <script type="text/javascript" src="lib/calendar/lang/calendar-zh_CN.js"></script>
+    <script type="text/javascript" src="student/lib/student.js"></script>
+  </head>
+  <body>
+  <form name="frm" method="post" action="register.action">
+  <table width="100%">
+    <thead>
+      <tr><th></th><th align="left">录入学生注册信息</th><th></th></tr>
+    </thead>
+    <tbody><tr><td colspan="3" align="center" style="color:red"></td></tr>
+    <tr bgcolor="#f0f0f0"><td align="right" nowrap="nowrap">　　省份：</td>
+    <td width="200px">
+      <select name="province" id="province" style="width:200px" onchange="provinceSelected()">
+        <option value="">请选择...</option>
+      </select>
+    </td><td align="left">*选择学校所在省份</td></tr>
+    <tr><td align="right">学校：</td><td>
+      <select name="school" id="school" style="width:200px" onchange="schoolSelected()" onclick="schoolClick()">
+        <option value="">请选择...</option>
+      </select>
+    </td><td align="left">*选择所在学校</td></tr>
+    <tr bgcolor="#f0f0f0"><td align="right">院系：</td><td>
+      <select name="department" id="department" style="width:200px" onchange="departmentSelected()" onclick="departmentClick()">
+        <option value="">请选择...</option>
+      </select>
+    </td><td align="left">*选择所在院系</td></tr>
+    <tr><td align="right">专业：</td><td>
+      <select name="major" id="major" style="width:200px" onclick="majorClick()">
+        <option value="">请选择...</option>
+      </select>
+    </td><td align="left">*选择所学专业</td></tr>
+    <tr bgcolor="#f0f0f0"><td align="right">学生类别：</td><td>
+      <select name="degree" id="degree" style="width:200px" onchange="degreeSelected()" onclick="degreeClick()">
+        <option value="">请选择...</option>
+      </select>
+    </td><td align="left">*选择学生类别</td></tr>
+    <tr><td align="right">年级：</td><td>
+      <select name="grade" id="grade" style="width:200px" onchange="gradeSelected()" onclick="gradeClick()">
+        <option value="">请选择...</option>
+      </select>
+    </td><td align="left">*选择所在年级</td></tr>
+    <tr bgcolor="#f0f0f0"><td align="right">班级：</td><td>
+      <select name="schoolclass" id="schoolclass" style="width:200px" onclick="schoolclassClick()">
+        <option value="">请选择...</option>
+      </select>
+    </td><td align="left">*选择所在班级</td></tr>
+    <tr><td align="right">学生证号：</td><td>
+      <input type="text" name="studentId" value="" style="width:200px"/>
+    </td><td align="left">*用作账号使用</td></tr>
+    <tr bgcolor="#f0f0f0"><td align="right">姓名：</td><td>
+      <input type="text" name="name" value="" style="width:200px"/>
+    </td><td align="left">*须填写真实姓名</td></tr>
+    <tr><td align="right">性别：</td><td>
+      <select name="sex" id="sex" style="width:200px">
+        <option value="">请选择...</option>
+      </select>
+    </td><td align="left">*选择性别</td></tr>
+    <tr bgcolor="#f0f0f0"><td align="right">出生日期：</td><td>
+      <input type="text" name="birthday" value=""  style="width:150px"/>
+      <button id="trigger" style="width:40px">...</button>
+    </td><td align="left">选择出生日期</td></tr>
+    <tr><td align="right">移动电话：</td><td>
+      <input type="text" name="mobile" value=""  style="width:200px"/>
+    </td><td align="left">填写有效手机号码</td></tr>
+    <tr bgcolor="#f0f0f0"><td align="right">固定电话：</td><td>
+      <input type="text" name="phone" value=""  style="width:200px"/>
+    </td><td align="left">填写有效的固定电话号码</td></tr>
+    <tr><td align="right">电子邮件：</td><td>
+      <input type="text" name="email" value=""  style="width:200px"/>
+    </td><td align="left">*用于找回密码或接收确认信息</td></tr>
+    <tr bgcolor="#f0f0f0"><td align="right">QQ号码：</td><td>
+      <input type="text" name="qq" value=""  style="width:200px"/>
+    </td><td align="left">填写有效的QQ号码</td></tr>
+    <tr style="display:"><td align="right">设置密码：</td><td>
+      <input type="password" name="password" value=""  style="width:200px"/>
+    </td><td align="left">*填写六位以上有效密码</td></tr>
+    <tr bgcolor="#f0f0f0" style="display:"><td align="right">重复密码：</td><td>
+      <input type="password" name="rePassword" value=""  style="width:200px"/>
+    </td><td align="left">*重复所设密码</td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td></td><td align="right">
+        <input type="submit" name="submit" value="保存"/>
+        <input type="reset" name="reset" value="重置"/>
+        <input type="button" name="back" value="返回"/>
+      </td><td></td></tr>
+    </tfoot>
+  </table>
+  </form>
+  </body>
+</html>

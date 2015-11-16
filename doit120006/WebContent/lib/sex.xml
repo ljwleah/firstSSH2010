@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- FileName:  sex.xml -->
+<root>
+  <code name="男" id="M"></code>
+  <code name="女" id="F"></code>
+</root>

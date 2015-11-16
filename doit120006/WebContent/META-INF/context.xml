@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Context>
+  <!-- JDBC Connector Resource -->
+  <!-- 
+  <Resource name="jdbc/hawk" 
+    auth="Container"
+    type="javax.sql.DataSource"
+    username="root"
+    password="123456" 
+    driverClassName="com.mysql.jdbc.Driver"
+    url="jdbc:mysql://localhost:3306/hawk?autoReconnect=true"
+  />
+-->   
+   
+  <!-- DBCP Connector Resource -->
+  <!-- 
+  <Resource name="jdbc/hawk" 
+    auth="Container"
+    type="javax.sql.DataSource"
+    maxActive="100"
+    maxIdle="30"
+    maxWait="10000"
+    username="root"
+    password="123456" 
+    driverClassName="com.mysql.jdbc.Driver"
+    url="jdbc:mysql://localhost:3306/hawk?autoReconnect=true"
+  />
+   -->
+  
+  <!-- TDCP Connector Resource -->
+  <!-- 
+  <Resource name="jdbc/hawk"
+    auth="Container"
+    type="javax.sql.DataSource"
+    factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+    testWhileIdle="true"
+    testOnBorrow="true"
+    testOnReturn="false"
+    validationQuery="SELECT 1"
+    validationInterval="30000"
+    timeBetweenEvictionRunsMillis="30000"
+    maxActive="100"
+    minIdle="10"
+    maxWait="10000"
+    initialSize="10"
+    removeAbandonedTimeout="60"
+    removeAbandoned="true"
+    logAbandoned="true"
+    minEvictableIdleTimeMillis="30000"
+    jmxEnabled="true"
+    jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"
+    username="root"
+    password="123456"
+    driverClassName="com.mysql.jdbc.Driver"
+    url="jdbc:mysql://localhost:3306/hawk"
+  />
+   -->
+
+  <!-- c3p0 DataBase Connection Pool JNDI resource define -->
+  <!--  -->
+  <Resource name="jdbc/hawk"
+    description="c3p0 DataBase Connection"
+    auth="Container"
+    driverClass="com.mysql.jdbc.Driver" 
+    maxPoolSize="400"
+    minPoolSize="20"
+    acquireIncrement="5" 
+    user="root"
+    password="123456" 
+    factory="org.apache.naming.factory.BeanFactory" 
+    type="com.mchange.v2.c3p0.ComboPooledDataSource" 
+    jdbcUrl="jdbc:mysql://localhost:3306/hawk?autoReconnect=true" />
+
+  <!-- Default set of monitored resources -->
+  <WatchedResource>WEB-INF/web.xml</WatchedResource>
+</Context>

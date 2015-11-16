@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- FileName:  class.xml -->
+<root>
+  <code name="1班" id="1"></code>
+  <code name="2班" id="2"></code>
+  <code name="3班" id="3"></code>
+  <code name="4班" id="4"></code>
+  <code name="5班" id="5"></code>
+  <code name="6班" id="6"></code>
+  <code name="7班" id="7"></code>
+  <code name="8班" id="8"></code>
+</root>

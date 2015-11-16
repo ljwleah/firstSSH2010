@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- FileName:  schoolclass.xml -->
+<root>
+  <code name="1班" id="1"></code>
+  <code name="2班" id="2"></code>
+  <code name="3班" id="3"></code>
+  <code name="4班" id="4"></code>
+  <code name="5班" id="5"></code>
+  <code name="6班" id="6"></code>
+  <code name="7班" id="7"></code>
+  <code name="8班" id="8"></code>
+  <code name="9班" id="9"></code>
+  <code name="A班" id="A"></code>
+  <code name="B班" id="B"></code>
+  <code name="C班" id="C"></code>
+  <code name="D班" id="D"></code>
+  <code name="E班" id="E"></code>
+  <code name="F班" id="F"></code>
+</root>

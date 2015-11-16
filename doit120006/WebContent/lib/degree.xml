@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- FileName:  degree.xml -->
+<root>
+  <code name="幼儿园" id="41"></code>
+  <code name="小学生" id="42"></code>
+  <code name="初中生" id="43"></code>
+  <code name="高中生" id="44"></code>
+  <code name="技校生" id="45"></code>
+  <code name="中专生" id="46"></code>
+  <code name="专科生" id="47"></code>
+  <code name="大学生" id="48"></code>
+  <code name="研究生" id="49"></code>
+  <code name="博士生" id="4A"></code>
+  <code name="博士后" id="4B"></code>
+  <code name="社会生" id="4C"></code>
+</root>

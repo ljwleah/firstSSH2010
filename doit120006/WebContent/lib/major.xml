@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- FileName:  major.xml -->
+<root>
+  <code name="计算机教育" id="10001"></code>
+  <code name="计算机应用" id="10002"></code>
+  <code name="动画与游戏" id="10003"></code>
+  <code name="日语强化" id="10004"></code>
+  <code name="广播电视" id="10005"></code>
+  <code name="教育应用" id="10006"></code>
+</root>
